@@ -19,8 +19,7 @@
 
 # onde descrevemos os cenários baseados em chamadas de Steps;
 @tag
-Feature: Execução de cenários de Cliente
-  I want to use this template for my feature file
+Feature: Cadastro de Cliente
 
   @tag1
   Scenario: Realizar Cadastro

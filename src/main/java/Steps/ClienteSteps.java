@@ -33,7 +33,6 @@ public class ClienteSteps {
 
 	@And("na tela Dados de Identificacao clico em Avancar")
 	public void clicarAvancar() {
-
 		cli.clicarAvancar();
 	}
 

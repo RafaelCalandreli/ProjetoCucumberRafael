@@ -16,4 +16,5 @@ public class MenusPage extends MenusElementMap {
 		PageFactory.initElements(TestRule.getDriver(), this);
 	}
 	
+	
 }

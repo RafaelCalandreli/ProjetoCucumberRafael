@@ -60,7 +60,7 @@ public class ClientePage extends ClienteElementMap {
 	}
 
 	public void verificarMensagemSucesso() {
-		// TODO Auto-generated method stub
+	
 
 	}
 
