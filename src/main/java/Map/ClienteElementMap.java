@@ -9,8 +9,8 @@ public class ClienteElementMap {
 	
 	//Dados Cliente
 
-	@FindBy(id="cpf_cnpj")
-	protected WebElement cpf;
+
+	protected WebElement cpf_cnpj;
 
 	@FindBy(id="fisica")
 	protected WebElement fisica;
@@ -18,14 +18,14 @@ public class ClienteElementMap {
 	@FindBy(id="juridica")
 	protected WebElement juridica;
 	
-	@FindBy(id="nome_razaosocial")
-	protected WebElement razaosocial;
 
-	@FindBy(id="email")
+	protected WebElement nome_razaosocial;
+
+
 	protected WebElement email;
 	
-	@FindBy(id="data_nascimento")
-	protected WebElement datanasc;
+
+	protected WebElement data_nascimento;
 	
 	@FindBy(id="sexo")
 	protected WebElement sexo;
@@ -33,7 +33,6 @@ public class ClienteElementMap {
 	@FindBy(id="estado_civil")
 	protected WebElement estadocivil;
 	
-	@FindBy(id="avancar")
 	protected WebElement avancar;
 
 	
@@ -60,6 +59,8 @@ public class ClienteElementMap {
 	
 	//Botão Salvar
 	protected WebElement salvar;
+	
+	protected WebElement mensagem;
 	
 
 	

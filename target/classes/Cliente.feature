@@ -30,6 +30,6 @@ Feature: Cadastro de Cliente
     And na tela Enderecos informo os enderecos
     And na tela Enderecos clico em Salvar
     Then na tela Enderecos sera exibida mensagem de sucesso
-    And efetuarei logout do sistema
+
 
  

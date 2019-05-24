@@ -10,10 +10,10 @@ public class ClientePage extends ClienteElementMap {
 
 	public void informarDadosPJ() {
 		fisica.click();
-		cpf.sendKeys("837.623.723-30");
-		razaosocial.sendKeys("Automação Rafael Teste");
+		cpf_cnpj.sendKeys("837.623.723-30");
+		nome_razaosocial.sendKeys("Automação Rafael Teste");
 		email.sendKeys("rcalandreli@gmail.com");
-		datanasc.sendKeys("21011992");
+		data_nascimento.sendKeys("21011992");
 
 		Select cmbSexo = new Select(sexo);
 		cmbSexo.selectByVisibleText("Masculino");
@@ -59,9 +59,23 @@ public class ClientePage extends ClienteElementMap {
 		
 	}
 
-	public void verificarMensagemSucesso() {
+	public boolean verificarMensagemSucesso() {
 	
-
+		try {
+			synchronized (TestRule.getDriver()) {
+				TestRule.getDriver().wait(3000);
+			}
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		String strMensagemExibida = mensagem.getText();
+		if(strMensagemExibida.contains("Cliente cadastrado com sucesso")) {
+			return true;
+		}else {
+			return false;
+		}
+		
 	}
 
 	
@@ -71,6 +85,11 @@ public class ClientePage extends ClienteElementMap {
 	
 	public ClientePage() {
 		PageFactory.initElements(TestRule.getDriver(), this);
+	}
+
+	public void sair() {
+	
+		
 	}
 	
 }

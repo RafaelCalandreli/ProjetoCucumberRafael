@@ -52,12 +52,27 @@ public class TestRule {
 
 	@After
 	public void afterCenario(Scenario cenario) {
-		extentTest.log(Status.PASS, "Cenário " + cenario.getName() + " executado com sucesso!");
-		extentReport.flush();
+
+		if (cenario.isFailed()) {
+			extentTest.log(Status.FAIL, "Cenario " + cenario.getName() + " executado com falhas!");
+			extentReport.flush();
+
+		} else {
+			extentTest.log(Status.PASS, "Cenario " + cenario.getName() + " executado com sucesso!");
+			extentReport.flush();
+		}
+		
+		if(driver != null) {
+			driver.close();
+		}
 	}
 
 	public static WebDriver getDriver() {
 		return driver;
+	}
+
+	public static ExtentTest getExtentTest() {
+		return extentTest;
 	}
 
 }
